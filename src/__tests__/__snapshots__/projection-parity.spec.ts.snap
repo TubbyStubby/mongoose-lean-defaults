@@ -1,0 +1,1751 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`projection parity find with projection {"_id":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"entries":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"entries":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"entries.a":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "entries": Object {
+      "a": Object {},
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "entries": Object {},
+  },
+]
+`;
+
+exports[`projection parity find with projection {"entries.b":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"items":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"items":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "items": Array [],
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "items": Array [],
+  },
+]
+`;
+
+exports[`projection parity find with projection {"items.meta":0,"items.name":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "qty": 1,
+      },
+      Object {
+        "qty": 5,
+      },
+      Object {
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"items.meta.tag":1,"items.qty":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "items": Array [],
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "qty": 1,
+      },
+    ],
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "items": Array [],
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.bio":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "profile": Object {
+      "bio": "bio",
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "profile": Object {
+      "bio": "bio",
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "profile": Object {
+      "bio": "bio",
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.items":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.items":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "profile": Object {
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.items.meta":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "profile": Object {
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+        },
+      ],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.items.name":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "profile": Object {
+      "items": Array [
+        Object {
+          "name": "item",
+        },
+        Object {
+          "name": "named",
+        },
+        Object {
+          "name": "item",
+        },
+      ],
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "profile": Object {
+      "items": Array [],
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"profile.items.qty":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"stats":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"stats":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"stats.wins":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"stats.wins":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "stats": Object {
+      "wins": 0,
+    },
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "stats": Object {
+      "wins": 3,
+    },
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "stats": Object {
+      "wins": 0,
+    },
+  },
+]
+`;
+
+exports[`projection parity find with projection {"title":0,"createdAt":0,"profile.bio":0,"items.qty":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+      },
+    ],
+    "profile": Object {
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"title":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "titleSuffix": "suffix",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"title":1,"_id":0} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "<generated>",
+    "title": "title",
+  },
+  Object {
+    "_id": "<generated>",
+    "title": "set",
+  },
+  Object {
+    "_id": "<generated>",
+    "title": "title",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"title":1,"profile.items.qty":1,"items":1,"entries":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "items": Array [],
+    "profile": Object {
+      "items": Array [],
+    },
+    "title": "title",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "items": Array [
+        Object {
+          "qty": 1,
+        },
+        Object {
+          "qty": 1,
+        },
+        Object {
+          "qty": 1,
+        },
+      ],
+    },
+    "title": "set",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "items": Array [],
+    },
+    "title": "title",
+  },
+]
+`;
+
+exports[`projection parity find with projection {"title":1} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "title": "title",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "title": "set",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "title": "title",
+  },
+]
+`;
+
+exports[`projection parity find with projection {} matches 2.3.5 output 1`] = `
+Array [
+  Object {
+    "_id": "000000000000000000000001",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000002",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "a": Object {
+        "count": 0,
+        "role": "member",
+      },
+      "b": Object {
+        "count": 0,
+        "role": "admin",
+      },
+    },
+    "items": Array [
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 5,
+      },
+      Object {
+        "meta": Object {
+          "tag": "tag",
+        },
+        "name": "item",
+        "qty": 1,
+      },
+    ],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "tag": "tag",
+          },
+          "name": "named",
+          "qty": 1,
+        },
+        Object {
+          "meta": Object {
+            "note": "n",
+            "tag": "tag",
+          },
+          "name": "item",
+          "qty": 1,
+        },
+      ],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 3,
+    },
+    "title": "set",
+    "titleSuffix": "suffix",
+  },
+  Object {
+    "_id": "000000000000000000000003",
+    "createdAt": 2020-01-01T00:00:00.000Z,
+    "entries": Object {
+      "c": Object {
+        "count": 7,
+        "role": "member",
+      },
+    },
+    "items": Array [],
+    "profile": Object {
+      "bio": "bio",
+      "items": Array [],
+    },
+    "stats": Object {
+      "losses": 0,
+      "wins": 0,
+    },
+    "title": "title",
+    "titleSuffix": "suffix",
+  },
+]
+`;

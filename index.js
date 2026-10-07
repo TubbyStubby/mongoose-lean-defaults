@@ -85,13 +85,14 @@ function attachDefaults(schema, res, options, prefix) {
         ((_b = (_a = this._mongooseOptions.lean.defaults) !== null && _a !== void 0 ? _a : options === null || options === void 0 ? void 0 : options.defaults) !== null && _b !== void 0 ? _b : false);
     if (shouldApplyDefaults) {
         if (getDefaultsRegistryEntry(schema).length) {
+            const defaults = getSelectedDefaults(this, schema, prefix);
             if (Array.isArray(res)) {
                 for (let i = 0; i < res.length; ++i) {
-                    attachDefaultsToDoc.call(this, schema, res[i], prefix);
+                    attachDefaultsToDoc(defaults, res[i]);
                 }
             }
             else {
-                attachDefaultsToDoc.call(this, schema, res, prefix);
+                attachDefaultsToDoc(defaults, res);
             }
         }
         for (let i = 0; i < schema.childSchemas.length; ++i) {
@@ -129,37 +130,42 @@ function attachDefaults(schema, res, options, prefix) {
     }
 }
 exports.attachDefaults = attachDefaults;
-function attachDefaultsToDoc(schema, doc, prefix) {
+function getSelectedDefaults(query, schema, prefix) {
+    const defaults = getDefaultsRegistryEntry(schema);
+    const fields = query._fields;
+    if (!query.selected() || !fields) {
+        return defaults;
+    }
+    const selectedFieldKeys = Object.keys(fields);
+    const inclusive = query.selectedInclusively();
+    const exclusive = query.selectedExclusively();
+    return defaults.filter((defaultEntry) => {
+        const pathname = defaultEntry.pathSegments.join('.');
+        const fullPath = prefix ? `${prefix}.${pathname}` : pathname;
+        const matchedKey = selectedFieldKeys.find((key) => fullPath === key ||
+            fullPath.startsWith(key + '.') ||
+            key.startsWith(fullPath + '.'));
+        const included = matchedKey && fields[matchedKey] != null;
+        if (inclusive && !included) {
+            return false;
+        }
+        if (exclusive && included) {
+            return false;
+        }
+        return true;
+    });
+}
+function attachDefaultsToDoc(defaults, doc) {
     if (doc == null)
         return;
     if (Array.isArray(doc)) {
         for (let i = 0; i < doc.length; ++i) {
-            attachDefaultsToDoc.call(this, schema, doc[i], prefix);
+            attachDefaultsToDoc(defaults, doc[i]);
         }
         return;
     }
-    const defaults = getDefaultsRegistryEntry(schema);
-    if (!defaults.length) {
-        return;
-    }
-    const fields = this._fields;
-    const selectedFieldKeys = this.selected() && fields ? Object.keys(fields) : null;
     for (let i = 0; i < defaults.length; i++) {
         const defaultEntry = defaults[i];
-        if (selectedFieldKeys) {
-            const pathname = defaultEntry.pathSegments.join('.');
-            const fullPath = prefix ? `${prefix}.${pathname}` : pathname;
-            const matchedKey = selectedFieldKeys.find((key) => fullPath === key ||
-                fullPath.startsWith(key + '.') ||
-                key.startsWith(fullPath + '.'));
-            const included = matchedKey && (fields === null || fields === void 0 ? void 0 : fields[matchedKey]) != null;
-            if (this.selectedInclusively() && !included) {
-                continue;
-            }
-            if (this.selectedExclusively() && included) {
-                continue;
-            }
-        }
         const pathSegments = defaultEntry.pathSegments;
         let cur = doc;
         const lastIndex = pathSegments.length - 1;

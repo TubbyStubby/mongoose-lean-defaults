@@ -126,12 +126,13 @@ export function attachDefaults(
 
   if (shouldApplyDefaults) {
     if (getDefaultsRegistryEntry(schema).length) {
+      const defaults = getSelectedDefaults(this, schema, prefix);
       if (Array.isArray(res)) {
         for (let i = 0; i < res.length; ++i) {
-          attachDefaultsToDoc.call(this, schema, res[i], prefix);
+          attachDefaultsToDoc(defaults, res[i]);
         }
       } else {
-        attachDefaultsToDoc.call(this, schema, res, prefix);
+        attachDefaultsToDoc(defaults, res);
       }
     }
 
@@ -185,50 +186,59 @@ export function attachDefaults(
   }
 }
 
-function attachDefaultsToDoc(
-  this: Query<unknown, Document>,
+/**
+ * Filters the schema's defaults down to the ones the query's projection keeps.
+ * The result depends only on (query, schema, prefix), so it is computed once
+ * per call rather than once per document.
+ */
+function getSelectedDefaults(
+  query: Query<unknown, Document>,
   schema: Schema,
-  doc: unknown,
   prefix?: string,
-) {
+): Default[] {
+  const defaults = getDefaultsRegistryEntry(schema);
+  // @ts-expect-error this._fields is private
+  const fields: Record<string, unknown> | null = query._fields;
+  if (!query.selected() || !fields) {
+    return defaults;
+  }
+
+  const selectedFieldKeys = Object.keys(fields);
+  const inclusive = query.selectedInclusively();
+  const exclusive = query.selectedExclusively();
+
+  return defaults.filter((defaultEntry) => {
+    const pathname = defaultEntry.pathSegments.join('.');
+    const fullPath = prefix ? `${prefix}.${pathname}` : pathname;
+    const matchedKey = selectedFieldKeys.find(
+      (key) =>
+        fullPath === key ||
+        fullPath.startsWith(key + '.') ||
+        key.startsWith(fullPath + '.'),
+    );
+
+    const included = matchedKey && fields[matchedKey] != null;
+    if (inclusive && !included) {
+      return false;
+    }
+    if (exclusive && included) {
+      return false;
+    }
+    return true;
+  });
+}
+
+function attachDefaultsToDoc(defaults: Default[], doc: unknown) {
   if (doc == null) return;
   if (Array.isArray(doc)) {
     for (let i = 0; i < doc.length; ++i) {
-      attachDefaultsToDoc.call(this, schema, doc[i], prefix);
+      attachDefaultsToDoc(defaults, doc[i]);
     }
     return;
   }
-
-  const defaults = getDefaultsRegistryEntry(schema);
-  if (!defaults.length) {
-    return;
-  }
-  // @ts-expect-error this._fields is private
-  const fields: Record<string, unknown> | null = this._fields;
-  const selectedFieldKeys: string[] | null =
-    this.selected() && fields ? Object.keys(fields) : null;
 
   for (let i = 0; i < defaults.length; i++) {
     const defaultEntry = defaults[i];
-
-    if (selectedFieldKeys) {
-      const pathname = defaultEntry.pathSegments.join('.');
-      const fullPath = prefix ? `${prefix}.${pathname}` : pathname;
-      const matchedKey = selectedFieldKeys.find(
-        (key) =>
-          fullPath === key ||
-          fullPath.startsWith(key + '.') ||
-          key.startsWith(fullPath + '.'),
-      );
-
-      const included = matchedKey && fields?.[matchedKey] != null;
-      if (this.selectedInclusively() && !included) {
-        continue;
-      }
-      if (this.selectedExclusively() && included) {
-        continue;
-      }
-    }
 
     const pathSegments = defaultEntry.pathSegments;
     let cur = doc as Record<string, unknown>;
